@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+    <script defer src="js/client.js"></script>
+    <!--just write link and select link:css -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <nav>
+        <img class="logo" src="chat_image_icon.png" alt="" >
+    </nav>
+    <!--just write div.container and get full emmet abbreviation-->
+    <!--yha pe basically humare saare msgs aaenge-->
+    <div class="container">
+        <!--we will have 2 types of classes for messages-->
+        <div class="message right">Divyanshi : Hello, How are you?</div>
+        <div class="message left">Shreya : Hii, I am good, how are you?</div>
+    </div>
+
+    <!--class for form related to sending-->
+    <div class="send">
+        <!--iska mtlb unsubmitted event ko listen krenge hum-->
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" type="submit">Send</button><!--type is submit so that it gets sent to other person-->
+        </form>
+    </div>
+</body>
+</html>

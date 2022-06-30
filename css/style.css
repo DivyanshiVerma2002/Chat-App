@@ -1,0 +1,94 @@
+/*class ko .classname krke likhte hai css file mai*/
+.logo{
+    /*to put our logo in centre, display block margin auto*/
+    display: block;/*used when we want to display it as a block separately with white spaces above and below it*/
+    margin: auto;
+    /*to adjust its size, ek rough size daaalke baad mai adjust krlo accordingly*/
+    width: 50px;
+    height: 50px;
+}
+
+/*tag ko tagname krke he likhte hai directly*/
+body{
+    height: 100vh;/*isko htaake aur lgaake differnce dekho screen colour and shades mai*/
+    background-image: linear-gradient(rgb(228, 195, 195),rgb(196, 102, 118));
+}
+
+.container{
+    /*to put all the content at centre*/
+    max-width: 955px;
+    /*just put any colour here in the starting to check how big your container is*/
+    background-color: aliceblue;
+    /*to get all this at centre*/
+    margin: auto;
+    /*this is the viewport height, depends on ki kitne msgs aae hai*/
+    height: 60vh;
+    /*to set borders of the box inside which messages are there*/
+    border: 2px solid black;
+    /*distance between border and messsages*/
+    padding: 33px;
+    /*jb zyada messages honge ek ke baad ek aaenge tab scroll down hoga y dirn mai*/
+    /*if u do overflow-y: scroll then u'll see a scrollbar regardless of screen se zyada msgs or not*/
+    /*but if u do overflow-y: auto then u won't see a scroll bar untill zyada msgs ho jae*/
+    overflow-y: auto;
+    /*spacing between main messages box and neeche waali bar jisme msg to be sent is typed*/
+    /*scroll likhte toh zabardasti dikhti scroll bar evn if kam msgs hote toh, ab tabhi dikhegi jab bojot saare msgs honge*/
+    margin-bottom: 33px;
+}
+
+/*ye vo waala area hoga jaha pe msgs hai abhi, baaki jgah container waala default background-colour hoga*/
+.message{
+    background-color: rgb(188, 152, 221);
+    /*accordingly dekh lo jitne lmbe texts hai utna he rkho, bohot lmba ya beech se kta hua won't look good obv*/
+    width: 24%;
+    /*isse thoda borders aur text ke beech mai gap aaega, isse phle sab chipka chipka aa rha tha*/
+    padding: 10px;
+    /*margin between message box and container box*/
+    /*this 2 px is the left right distance between container and msg box*/
+    /*this 17px is the gap between 2 differnt msgs as here*/
+    margin: 17px 12px;
+    /* highlight box on a message*/
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
+
+.left{
+    /*to put my msg on left side*/
+    float: left;
+    /*to have only one msg in a line, so that sb ek ke neeche ek he aae*/
+    clear: both;
+}
+
+.right{
+    float: right;
+    clear: both;
+}
+
+/*form mai id="send-container" toh vohi likhna hai yha pr*/
+#send-container{
+    /*yha pr display block margin auto krne se send box centre mai nhi aaega bcoz*/ 
+    /*vo 100% spread hai horizontally and uske elements inline hai*/
+    /*isiliye yha pe uske saath saath text-align centre kro*/
+    display: block;
+    margin: auto;
+    text-align: center;
+    max-width: 985px;
+    width: 100%;/*so that vo horizontally puri screen pe aa jae*/
+    /*baaki inspect element mai jaake element.style mai width aur baaki chise daal do for msg inp*/
+    
+}
+
+/*saari ids ko css file mai # krke he likhte hai*/
+#messageInp{
+    width: 92%;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+}
+
+.btn{
+    cursor: pointer;
+    border: 2px solid black;
+    border-radius: 6px;
+    height: 34px;
+}
